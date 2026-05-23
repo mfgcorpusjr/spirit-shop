@@ -27,7 +27,7 @@ export default function PotionFilter({ type }: Props) {
           variant="ghost"
           className={`rounded-full button-${filter.type}`}
         >
-          <Link href={filter.type ? `/?type=${filter.type}` : "/"}>
+          <Link href={`/?type=${filter.type}`}>
             <PotionIcon
               className={cn("size-5", {
                 "animate-ping": filter.type === type,
