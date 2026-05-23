@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 
 import { ThemeProvider } from "@/components/themes/ThemeProvider";
+import Container from "@/components/commons/Container";
+import Navbar from "@/components/commons/Navbar";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -25,8 +27,14 @@ export default function RootLayout({
       className={`${inter.className} antialiased`}
       suppressHydrationWarning
     >
-      <body>
-        <ThemeProvider>{children}</ThemeProvider>
+      <body className="min-h-screen bg-linear-to-b from-background to-purple-950">
+        <ThemeProvider>
+          <Container className="flex flex-col gap-8 py-8">
+            <Navbar />
+
+            {children}
+          </Container>
+        </ThemeProvider>
       </body>
     </html>
   );
