@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 
 import { ThemeProvider } from "@/components/themes/ThemeProvider";
+import { StarsBackground } from "@/components/animate-ui/components/backgrounds/stars";
 import Container from "@/components/commons/Container";
 import Navbar from "@/components/commons/Navbar";
 
@@ -29,11 +30,13 @@ export default function RootLayout({
     >
       <body>
         <ThemeProvider>
-          <Container className="min-h-screen flex-1 flex flex-col gap-16 py-8">
-            <Navbar />
+          <StarsBackground className="min-h-screen flex">
+            <Container className="flex-1 flex flex-col gap-16 py-8">
+              <Navbar />
 
-            {children}
-          </Container>
+              {children}
+            </Container>
+          </StarsBackground>
         </ThemeProvider>
       </body>
     </html>
