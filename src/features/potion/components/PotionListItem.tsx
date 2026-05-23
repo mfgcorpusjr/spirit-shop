@@ -1,11 +1,5 @@
 import Image from "next/image";
-import {
-  LucideStar,
-  LucideGitFork,
-  LucideFlame,
-  LucideBox,
-  LucideZap,
-} from "lucide-react";
+import { LucideStar, LucideGitFork } from "lucide-react";
 
 import {
   Card,
@@ -16,6 +10,7 @@ import {
   CardFooter,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import PotionIcon from "@/features/potion/components/PotionIcon";
 
 import { cn } from "@/lib/utils";
 import { Potion } from "@/features/potion/utils/types";
@@ -39,7 +34,7 @@ export default function PotionListItem({ potion }: Props) {
             alt={potion.name}
             width={32}
             height={32}
-            className="rounded-full border border-primary"
+            className="rounded-full"
           />
 
           <div>
@@ -52,13 +47,7 @@ export default function PotionListItem({ potion }: Props) {
         </CardTitle>
 
         <CardAction>
-          {potionType === "fire" ? (
-            <LucideFlame className={cn(`size-4 icon-${potionType}`)} />
-          ) : potionType === "ice" ? (
-            <LucideBox className={cn(`size-4 icon-${potionType}`)} />
-          ) : (
-            <LucideZap className={cn(`size-4 icon-${potionType}`)} />
-          )}
+          <PotionIcon className="size-4" potionType={potionType} />
         </CardAction>
       </CardHeader>
 
