@@ -27,9 +27,9 @@ export default function RootLayout({
       className={`${inter.className} antialiased`}
       suppressHydrationWarning
     >
-      <body className="min-h-screen bg-linear-to-b from-background to-purple-950">
+      <body>
         <ThemeProvider>
-          <Container className="flex flex-col gap-16 py-8">
+          <Container className="min-h-screen flex-1 flex flex-col gap-16 py-8">
             <Navbar />
 
             {children}

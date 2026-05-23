@@ -129,7 +129,33 @@
 }
 
 @layer utilities {
-  .gradient-text {
+  .text-gradient {
     @apply bg-linear-to-r from-purple-300 via-purple-500 to-pink-700 bg-clip-text text-transparent;
+  }
+
+  .card-gradient {
+    @apply absolute top-0 right-0 size-16 rounded-full blur-3xl;
+  }
+  .card-gradient-fire {
+    @apply bg-red-500;
+  }
+  .card-gradient-ice {
+    @apply bg-cyan-500;
+  }
+  .card-gradient-electric {
+    @apply bg-yellow-500;
+  }
+
+  .card-ring {
+    @apply transition-all duration-300;
+  }
+  .card-ring-fire {
+    @apply hover:ring-red-500;
+  }
+  .card-ring-ice {
+    @apply hover:ring-cyan-500;
+  }
+  .card-ring-electric {
+    @apply hover:ring-yellow-500;
   }
 }
