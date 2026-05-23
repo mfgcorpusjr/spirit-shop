@@ -1,5 +1,6 @@
 import PotionFilter from "@/features/potion/components/PotionFilter";
 import PotionListItem from "@/features/potion/components/PotionListItem";
+import Placeholder from "@/components/commons/Placeholder";
 
 import getPotions from "@/features/potion/queries/getPotions";
 import { getPotionType } from "@/features/potion/utils/helpers";
@@ -12,7 +13,7 @@ export default async function PotionList({ type }: Props) {
   const potions = await getPotions();
 
   if (potions.length === 0) {
-    return null;
+    return <Placeholder text="No potion found" />;
   }
 
   const filteredPotions = type
