@@ -29,16 +29,16 @@ export default function RootLayout({
       className={`${inter.className} antialiased`}
       suppressHydrationWarning
     >
-      <body>
+      <body className="min-h-screen relative flex">
+        <StarsBackground className="absolute -z-10" />
+
         <ThemeProvider>
           <TooltipProvider>
-            <StarsBackground className="min-h-screen flex">
-              <Container className="flex-1 flex flex-col gap-16 py-8">
-                <Navbar />
+            <Container className="flex-1 flex flex-col gap-16 py-8">
+              <Navbar />
 
-                {children}
-              </Container>
-            </StarsBackground>
+              {children}
+            </Container>
           </TooltipProvider>
         </ThemeProvider>
       </body>
