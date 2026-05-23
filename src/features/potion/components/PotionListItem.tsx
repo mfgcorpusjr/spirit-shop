@@ -1,5 +1,11 @@
 import Image from "next/image";
-import { LucideStar, LucideGitFork } from "lucide-react";
+import {
+  LucideStar,
+  LucideGitFork,
+  LucideFlame,
+  LucideBox,
+  LucideZap,
+} from "lucide-react";
 
 import {
   Card,
@@ -45,7 +51,15 @@ export default function PotionListItem({ potion }: Props) {
           </div>
         </CardTitle>
 
-        <CardAction></CardAction>
+        <CardAction>
+          {potionType === "fire" ? (
+            <LucideFlame className={cn(`size-4 icon-${potionType}`)} />
+          ) : potionType === "ice" ? (
+            <LucideBox className={cn(`size-4 icon-${potionType}`)} />
+          ) : (
+            <LucideZap className={cn(`size-4 icon-${potionType}`)} />
+          )}
+        </CardAction>
       </CardHeader>
 
       <CardContent>
@@ -54,7 +68,7 @@ export default function PotionListItem({ potion }: Props) {
         </p>
       </CardContent>
 
-      <CardFooter className="flex flex-col gap-4">
+      <CardFooter className="flex flex-col gap-4 h-full">
         <div className="w-full flex justify-between items-center gap-4 text-xs text-muted-foreground">
           <div className="flex items-center gap-2">
             <LucideStar className="size-3 text-yellow-500" />
