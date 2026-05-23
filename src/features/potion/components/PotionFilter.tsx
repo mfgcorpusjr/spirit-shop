@@ -56,7 +56,7 @@ export default function PotionFilter({ type }: Props) {
         </Tooltip>
       ))}
 
-      <Button asChild variant="ghost" className="rounded-full">
+      <Button asChild variant="secondary" className="rounded-full">
         <Link href="/">
           <LucideSparkles
             className={cn("size-5 text-purple-300", {
