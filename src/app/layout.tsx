@@ -29,7 +29,7 @@ export default function RootLayout({
     >
       <body className="min-h-screen bg-linear-to-b from-background to-purple-950">
         <ThemeProvider>
-          <Container className="flex flex-col gap-8 py-8">
+          <Container className="flex flex-col gap-16 py-8">
             <Navbar />
 
             {children}
