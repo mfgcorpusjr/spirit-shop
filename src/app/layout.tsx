@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 
 import { ThemeProvider } from "@/components/themes/ThemeProvider";
+import { TooltipProvider } from "@/components/ui/tooltip";
 import { StarsBackground } from "@/components/animate-ui/components/backgrounds/stars";
 import Container from "@/components/commons/Container";
 import Navbar from "@/components/commons/Navbar";
@@ -30,13 +31,15 @@ export default function RootLayout({
     >
       <body>
         <ThemeProvider>
-          <StarsBackground className="min-h-screen flex">
-            <Container className="flex-1 flex flex-col gap-16 py-8">
-              <Navbar />
+          <TooltipProvider>
+            <StarsBackground className="min-h-screen flex">
+              <Container className="flex-1 flex flex-col gap-16 py-8">
+                <Navbar />
 
-              {children}
-            </Container>
-          </StarsBackground>
+                {children}
+              </Container>
+            </StarsBackground>
+          </TooltipProvider>
         </ThemeProvider>
       </body>
     </html>
