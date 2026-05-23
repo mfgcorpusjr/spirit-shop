@@ -4,13 +4,21 @@ import Hero from "@/components/home/Hero";
 import PotionList from "@/features/potion/components/PotionList";
 import Spinner from "@/components/commons/Spinner";
 
-export default function HomePage() {
+type Props = {
+  searchParams: Promise<{
+    type?: string;
+  }>;
+};
+
+export default async function HomePage({ searchParams }: Props) {
+  const { type } = await searchParams;
+
   return (
     <div className="flex-1 flex flex-col gap-8">
       <Hero />
 
       <Suspense fallback={<Spinner />}>
-        <PotionList />
+        <PotionList query={type} />
       </Suspense>
     </div>
   );

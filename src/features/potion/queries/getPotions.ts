@@ -5,6 +5,9 @@ const getPotions = async () => {
     const res = await fetch(
       "https://api.github.com/search/repositories?q=topic:javascript+stars:>=5000&sort=stars&order=desc",
       {
+        next: {
+          revalidate: 3600,
+        },
         headers: {
           Accept: "application/vnd.github+json",
           Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,

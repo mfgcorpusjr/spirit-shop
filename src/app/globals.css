@@ -168,4 +168,14 @@
   .icon-electric {
     @apply text-yellow-500;
   }
+
+  .button-fire {
+    @apply bg-linear-to-r from-red-800 via-red-950 to-transparent;
+  }
+  .button-ice {
+    @apply bg-linear-to-r from-cyan-800 via-cyan-950 to-transparent;
+  }
+  .button-electric {
+    @apply bg-linear-to-r from-yellow-800 via-yellow-950 to-transparent;
+  }
 }

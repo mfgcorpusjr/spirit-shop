@@ -1,9 +1,11 @@
 import { LucideFlame, LucideBox, LucideZap } from "lucide-react";
 
+import { PotionType } from "@/features/potion/utils/types";
+
 import { cn } from "@/lib/utils";
 
 type Props = {
-  potionType: "electric" | "ice" | "fire";
+  potionType: PotionType;
   className?: string;
 };
 

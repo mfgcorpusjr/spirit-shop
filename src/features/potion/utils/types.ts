@@ -10,3 +10,5 @@ export type Potion = {
   forks_count: number;
   topics: string[];
 };
+
+export type PotionType = "electric" | "ice" | "fire";
