@@ -48,7 +48,7 @@ export default function PotionDetailsLeft({ potion }: Props) {
 
       <CardContent className="space-y-4">
         <PotionSection title="Github Stats">
-          <div className="flex justify-between items-center gap-4 text-sm text-muted-foreground">
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-2 text-sm text-muted-foreground">
             <PotionAttribute
               icon={<LucideStar />}
               iconClassName="size-4 text-yellow-500"
