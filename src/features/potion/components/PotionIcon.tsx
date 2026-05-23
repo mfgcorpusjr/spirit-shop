@@ -1,6 +1,6 @@
 import { LucideFlame, LucideBox, LucideZap } from "lucide-react";
 
-import { PotionType } from "@/features/potion/utils/types";
+import type { PotionType } from "@/features/potion/utils/types";
 
 import { cn } from "@/lib/utils";
 

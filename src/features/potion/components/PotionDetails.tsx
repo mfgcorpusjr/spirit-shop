@@ -1,5 +1,8 @@
 import { notFound } from "next/navigation";
 
+import PotionDetailsLeft from "@/features/potion/components/PotionDetailsLeft";
+import PotionDetailsRight from "@/features/potion/components/PotionDetailsRight";
+
 import getPotion from "@/features/potion/queries/getPotion";
 
 type Props = {
@@ -15,10 +18,14 @@ export default async function PotionDetails({ owner, repo }: Props) {
   }
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3">
-      <div className="md:col-span-1">Left</div>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="md:col-span-1">
+        <PotionDetailsLeft potion={potion} />
+      </div>
 
-      <div className="md:col-span-2">Right</div>
+      <div className="md:col-span-2">
+        <PotionDetailsRight potion={potion} />
+      </div>
     </div>
   );
 }

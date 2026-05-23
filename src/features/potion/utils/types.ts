@@ -8,7 +8,9 @@ export type Potion = {
   description: string;
   stargazers_count: number;
   forks_count: number;
+  language: string | null;
   topics: string[];
+  updated_at: string;
 };
 
 export type PotionType = "electric" | "ice" | "fire";

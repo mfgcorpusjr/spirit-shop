@@ -12,9 +12,10 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import PotionIcon from "@/features/potion/components/PotionIcon";
+import PotionAttribute from "@/features/potion/components/PotionAttribute";
 
 import { cn } from "@/lib/utils";
-import { Potion } from "@/features/potion/utils/types";
+import type { Potion } from "@/features/potion/utils/types";
 import { getPotionType, formatStats } from "@/features/potion/utils/helpers";
 
 type Props = {
@@ -60,18 +61,18 @@ export default function PotionListItem({ potion }: Props) {
         </CardContent>
 
         <CardFooter className="flex flex-col gap-4 h-full">
-          <div className="w-full flex justify-between items-center gap-4 text-xs text-muted-foreground">
-            <div className="flex items-center gap-2">
-              <LucideStar className="size-3 text-yellow-500" />
+          <div className="w-full flex justify-between items-center gap-4">
+            <PotionAttribute
+              icon={<LucideStar />}
+              iconClassName="text-yellow-500"
+              text={`${formatStats(potion.stargazers_count)} star`}
+            />
 
-              <span>{formatStats(potion.stargazers_count)} star</span>
-            </div>
-
-            <div className="flex items-center gap-2">
-              <LucideGitFork className="size-3 text-cyan-500" />
-
-              <span>{formatStats(potion.forks_count)} fork</span>
-            </div>
+            <PotionAttribute
+              icon={<LucideGitFork />}
+              iconClassName="text-cyan-500"
+              text={`${formatStats(potion.forks_count)} fork`}
+            />
           </div>
 
           <div className="w-full flex flex-wrap items-center gap-2">

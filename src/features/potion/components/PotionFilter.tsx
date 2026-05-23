@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/tooltip";
 import PotionIcon from "@/features/potion/components/PotionIcon";
 
-import { PotionType } from "@/features/potion/utils/types";
+import type { PotionType } from "@/features/potion/utils/types";
 import { cn } from "@/lib/utils";
 
 const filters: { type: PotionType; label: string }[] = [

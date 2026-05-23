@@ -1,4 +1,4 @@
-import { Potion } from "@/features/potion/utils/types";
+import type { Potion } from "@/features/potion/utils/types";
 
 const getPotions = async () => {
   try {

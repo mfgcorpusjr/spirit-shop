@@ -1,4 +1,4 @@
-import { Potion } from "@/features/potion/utils/types";
+import type { Potion } from "@/features/potion/utils/types";
 
 const getPotion = async ({ owner, repo }: { owner: string; repo: string }) => {
   try {
