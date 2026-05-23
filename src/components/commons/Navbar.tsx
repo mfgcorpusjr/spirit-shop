@@ -12,7 +12,7 @@ export default function Navbar() {
         </h1>
       </Link>
 
-      <Button asChild variant="secondary">
+      <Button asChild variant="secondary" size="sm">
         <Link href="/mystery-potion">Mystery Potion 🔥</Link>
       </Button>
     </nav>
