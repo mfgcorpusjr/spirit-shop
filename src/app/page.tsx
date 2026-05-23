@@ -18,7 +18,7 @@ export default async function HomePage({ searchParams }: Props) {
       <Hero />
 
       <Suspense fallback={<Spinner />}>
-        <PotionList query={type} />
+        <PotionList type={type} />
       </Suspense>
     </div>
   );

@@ -5,25 +5,25 @@ import getPotions from "@/features/potion/queries/getPotions";
 import { getPotionType } from "@/features/potion/utils/helpers";
 
 type Props = {
-  query?: string;
+  type?: string;
 };
 
-export default async function PotionList({ query }: Props) {
+export default async function PotionList({ type }: Props) {
   const potions = await getPotions();
 
   if (potions.length === 0) {
     return null;
   }
 
-  const filteredPotions = query
+  const filteredPotions = type
     ? potions.filter((potion) => {
-        return getPotionType(potion.stargazers_count) === query;
+        return getPotionType(potion.stargazers_count) === type;
       })
     : potions;
 
   return (
     <>
-      <PotionFilter query={query} />
+      <PotionFilter type={type} />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredPotions.map((potion) => (

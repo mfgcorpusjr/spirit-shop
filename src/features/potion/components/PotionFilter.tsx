@@ -14,10 +14,10 @@ const filters: { type: PotionType; label: string }[] = [
 ];
 
 type Props = {
-  query?: string;
+  type?: string;
 };
 
-export default function PotionFilter({ query }: Props) {
+export default function PotionFilter({ type }: Props) {
   return (
     <div className="flex flex-wrap justify-center items-center gap-4">
       {filters.map((filter) => (
@@ -30,7 +30,7 @@ export default function PotionFilter({ query }: Props) {
           <Link href={filter.type ? `/?type=${filter.type}` : "/"}>
             <PotionIcon
               className={cn("size-5", {
-                "animate-ping": filter.type === query,
+                "animate-ping": filter.type === type,
               })}
               potionType={filter.type}
             />
@@ -44,7 +44,7 @@ export default function PotionFilter({ query }: Props) {
         <Link href="/">
           <LucideSparkles
             className={cn("size-5 text-purple-300", {
-              "animate-ping": !query,
+              "animate-ping": !type,
             })}
           />
           All Types
