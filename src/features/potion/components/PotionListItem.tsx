@@ -27,7 +27,7 @@ export default function PotionListItem({ potion }: Props) {
 
   return (
     <Link href={`/potions/${potion.owner.login}__${potion.name}`}>
-      <Card className={cn(`relative card-ring card-ring-${potionType}`)}>
+      <Card className={cn(`h-full relative card-ring card-ring-${potionType}`)}>
         <div className={cn(`card-gradient card-gradient-${potionType}`)} />
 
         <CardHeader>
