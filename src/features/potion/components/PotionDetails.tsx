@@ -4,14 +4,16 @@ import PotionDetailsLeft from "@/features/potion/components/PotionDetailsLeft";
 import PotionDetailsRight from "@/features/potion/components/PotionDetailsRight";
 
 import getPotion from "@/features/potion/queries/getPotion";
+import getMysteryPotion from "@/features/potion/queries/getMysteryPotion";
 
 type Props = {
-  owner: string;
-  repo: string;
+  owner?: string;
+  repo?: string;
 };
 
 export default async function PotionDetails({ owner, repo }: Props) {
-  const potion = await getPotion({ owner, repo });
+  const potion =
+    owner && repo ? await getPotion({ owner, repo }) : await getMysteryPotion();
 
   if (!potion) {
     notFound();

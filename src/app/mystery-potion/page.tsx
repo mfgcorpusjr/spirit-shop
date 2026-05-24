@@ -4,25 +4,16 @@ import Heading from "@/components/commons/Heading";
 import Spinner from "@/components/commons/Spinner";
 import PotionDetails from "@/features/potion/components/PotionDetails";
 
-type Props = {
-  params: Promise<{
-    slug: string;
-  }>;
-};
-
-export default async function PotionDetailsPage({ params }: Props) {
-  const { slug } = await params;
-  const [owner, repo] = slug.split("__");
-
+export default function MysteryPotionPage() {
   return (
     <div className="flex-1 flex flex-col gap-8">
       <Heading
-        title="Potion Details"
-        description="Discover the magical properties of this enchanted brew."
+        title="Mystery Potion"
+        description="This potion is a mystery. It is a mystery. It is a mystery."
       />
 
       <Suspense fallback={<Spinner />}>
-        <PotionDetails owner={owner} repo={repo} />
+        <PotionDetails />
       </Suspense>
     </div>
   );
