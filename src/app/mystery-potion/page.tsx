@@ -4,6 +4,8 @@ import Heading from "@/components/commons/Heading";
 import Spinner from "@/components/commons/Spinner";
 import PotionDetails from "@/features/potion/components/PotionDetails";
 
+export const dynamic = "force-dynamic";
+
 export default function MysteryPotionPage() {
   return (
     <div className="flex-1 flex flex-col gap-8">
