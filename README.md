@@ -2,7 +2,7 @@
 
 ### Live Demo
 
-A working version of this app is available at https://spirit-shop-eight.vercel.app/mystery-potion
+A working version of this app is available at https://spirit-shop-eight.vercel.app/
 
 ### Key Dependencies
 
