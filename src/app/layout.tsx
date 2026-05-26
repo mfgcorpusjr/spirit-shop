@@ -13,7 +13,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Spirit Shop",
+  title: {
+    default: "Spirit Shop",
+    template: "%s | Spirit Shop",
+  },
   description:
     "Discover magical potions brewed from the powers of popular open-source tools",
 };

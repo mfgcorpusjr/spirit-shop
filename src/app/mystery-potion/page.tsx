@@ -1,10 +1,15 @@
 import { Suspense } from "react";
+import { Metadata } from "next";
 
 import Heading from "@/components/commons/Heading";
 import Spinner from "@/components/commons/Spinner";
 import PotionDetails from "@/features/potion/components/PotionDetails";
 
 export const dynamic = "force-dynamic";
+
+export const metadata: Metadata = {
+  title: "Mystery Potion",
+};
 
 export default function MysteryPotionPage() {
   return (

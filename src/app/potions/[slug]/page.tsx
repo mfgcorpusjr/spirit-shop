@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import { Metadata } from "next";
 
 import Heading from "@/components/commons/Heading";
 import Spinner from "@/components/commons/Spinner";
@@ -8,6 +9,17 @@ type Props = {
   params: Promise<{
     slug: string;
   }>;
+};
+
+export const generateMetadata = async ({
+  params,
+}: Props): Promise<Metadata> => {
+  const { slug } = await params;
+  const [, repo] = slug.split("__");
+
+  return {
+    title: repo,
+  };
 };
 
 export default async function PotionDetailsPage({ params }: Props) {
