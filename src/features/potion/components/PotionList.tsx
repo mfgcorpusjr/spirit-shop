@@ -1,6 +1,6 @@
 import PotionFilter from "@/features/potion/components/PotionFilter";
 import PotionListItem from "@/features/potion/components/PotionListItem";
-import Placeholder from "@/components/commons/Placeholder";
+import Placeholder from "@/components/common/Placeholder";
 
 import getPotions from "@/features/potion/queries/getPotions";
 import { getPotionType } from "@/features/potion/utils/helpers";

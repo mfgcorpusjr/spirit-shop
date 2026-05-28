@@ -2,7 +2,7 @@ import { Suspense } from "react";
 
 import Hero from "@/components/home/Hero";
 import PotionList from "@/features/potion/components/PotionList";
-import Spinner from "@/components/commons/Spinner";
+import Spinner from "@/components/common/Spinner";
 
 type Props = {
   searchParams: Promise<{

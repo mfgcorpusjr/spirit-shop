@@ -1,8 +1,8 @@
 import { Suspense } from "react";
 import { Metadata } from "next";
 
-import Heading from "@/components/commons/Heading";
-import Spinner from "@/components/commons/Spinner";
+import Heading from "@/components/common/Heading";
+import Spinner from "@/components/common/Spinner";
 import PotionDetails from "@/features/potion/components/PotionDetails";
 
 export const dynamic = "force-dynamic";
